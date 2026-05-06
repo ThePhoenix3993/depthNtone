@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Depth N Tone | Premium Salon</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar container">
+    <div class="logo">Depth N Tone</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Portfolio</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="nav-actions">
+      <a href="#appointment" class="btn-primary">Book Now</a>
+    </div>
+  </nav>
+
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- 1. HERO SECTION -->
+      <section id="home" class="hero-section container">
+        <div class="hero-text fade-up">
+          <h1>Elevate Your Beauty<br>with Premium <span class="highlight">Styling</span></h1>
+          <p>Experience the pinnacle of luxury at Sardari Khera, Lucknow. Our experienced stylists are dedicated to
+            bringing out your unique glow.</p>
+          <div class="hero-btns">
+            <a href="#services" class="btn-primary">Explore Services &rarr;</a>
+            <div class="squiggle-arrow">
+              <svg width="60" height="30" viewBox="0 0 60 30" fill="none" stroke="var(--color-accent)" stroke-width="2">
+                <path d="M0,25 C15,25 15,5 30,5 C45,5 45,25 60,15" />
+                <polyline points="55,10 60,15 55,20" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual fade-up delay-1">
+          <!-- Using the exterior image as the main hero background element as requested before -->
+          <div class="hero-image-wrapper">
+            <img src="/photos/salon_interior.jpg" alt="Depth N Tone Salon Interior" class="main-hero-img"
+              style="object-position: center;"
+              onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80'">
+          </div>
+          <!-- Floating badge -->
+          <div class="floating-badge">
+            <div class="stars">★★★★★</div>
+            <p>Top Rated Salon</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORIES / HIGHLIGHTS -->
+      <section class="categories-section container fade-up">
+        <div class="category-arch">
+          <img src="/photos/new_hair_styling.jpg" alt="Hair Styling"
+            onerror="this.src='https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=500&q=80'">
+          <div class="arch-label">Hair Styling</div>
+        </div>
+        <div class="category-arch">
+          <img src="/photos/skin_care.jpg" alt="Skin Care"
+            onerror="this.src='https://images.unsplash.com/photo-1512496015851-a1dc8f415518?auto=format&fit=crop&w=500&q=80'">
+          <div class="arch-label">Skin Care</div>
+        </div>
+        <div class="category-arch">
+          <img src="/placeholder-gal3.jpg" alt="Makeup"
+            onerror="this.src='https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=500&q=80'">
+          <div class="arch-label">Makeup</div>
+        </div>
+      </section>
+
+      <!-- 2. SERVICES SECTION -->
+      <section id="services" class="services-section">
+        <div class="container services-layout">
+          <div class="services-header fade-up">
+            <h2>Services We<br>Provide</h2>
+            <p>Our experienced aestheticians and stylists will customize each service to suit your unique needs and
+              styling concerns.</p>
+            <a href="#contact" class="btn-outline">More Services &rarr;</a>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card fade-up" data-tilt>
+              <img src="/photos/new_hair_styling.jpg" alt="Hair Crafting" class="service-img">
+              <div class="service-content">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                    <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                    <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                  </svg></div>
+                <h3>Hair Crafting</h3>
+                <p>Precision cuts, coloring, and styling tailored to frame your features perfectly.</p>
+                <a href="#appointment" class="btn-book">Book Now &rarr;</a>
+              </div>
+            </div>
+            <div class="service-card fade-up delay-1" data-tilt>
+              <img src="/photos/facials.png" alt="Facials" class="service-img">
+              <div class="service-content">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                  </svg></div>
+                <h3>Facials</h3>
+                <p>Our facials include deep cleansing, exfoliation, and a relaxing massage.</p>
+                <a href="#appointment" class="btn-book">Book Now &rarr;</a>
+              </div>
+            </div>
+            <div class="service-card fade-up" data-tilt>
+              <img src="/photos/mani_pedi.png" alt="Manicure & Pedicure" class="service-img">
+              <div class="service-content">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg></div>
+                <h3>Manicure & Pedicure</h3>
+                <p>Relax and rejuvenate with our hand and foot care designed to ease tension.</p>
+                <a href="#appointment" class="btn-book">Book Now &rarr;</a>
+              </div>
+            </div>
+            <div class="service-card fade-up delay-1" data-tilt>
+              <img src="/photos/bridal_makeup.png" alt="Bridal Makeup" class="service-img">
+              <div class="service-content">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg></div>
+                <h3>Bridal Makeup</h3>
+                <p>Flawless, long-lasting makeup designed for your most special day.</p>
+                <a href="#appointment" class="btn-book">Book Now &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. PORTFOLIO / GALLERY -->
+      <section id="gallery" class="gallery-section container text-center">
+        <h2 class="fade-up">Gallery</h2>
+        <div class="gallery-grid fade-up delay-1">
+          <a href="/photos/IMG_1166.jpg" target="_blank"><img src="/photos/IMG_1166.jpg" alt="Gallery Image 1" /></a>
+          <a href="/photos/IMG_1167.jpg" target="_blank"><img src="/photos/IMG_1167.jpg" alt="Gallery Image 2" /></a>
+          <a href="/photos/IMG_1263.jpg" target="_blank"><img src="/photos/IMG_1263.jpg" alt="Gallery Image 3" /></a>
+          <a href="/photos/IMG_1266.jpg" target="_blank"><img src="/photos/IMG_1266.jpg" alt="Gallery Image 4" /></a>
+        </div>
+      </section>
+
+      <!-- 4. ABOUT SECTION -->
+      <section id="about" class="about-section container">
+        <div class="about-visual fade-up">
+          <div class="owner-image-arch">
+            <img src="/photos/owner.jpg" alt="Salon Owner" style="object-position: top center;"
+              onerror="this.src='https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=600&q=80'">
+          </div>
+        </div>
+        <div class="about-text fade-up delay-1">
+          <h2>Your Beauty And<br>Success Starts Here</h2>
+          <p>Guided by passion and an unwavering commitment to luxury, our founder has transformed Depth N Tone into
+            Sardari Khera's premier beauty destination. From humble beginnings to crafting a sanctuary of elegance, our
+            journey is reflected in every detail.</p>
+          <a href="#contact" class="btn-primary">Connect With Us &rarr;</a>
+        </div>
+      </section>
+
+      <!-- 5. TESTIMONIALS SECTION -->
+      <section id="testimonials" class="testimonials-section container">
+        <div class="testi-visual fade-up">
+          <div class="testi-arch">
+            <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&w=500&q=80"
+              alt="Happy Client">
+          </div>
+        </div>
+        <div class="testi-text fade-up delay-1">
+          <h2>What Our<br>Clients Say</h2>
+          <p class="quote">"I had my makeup and hair done at this luxury salon for my wedding and it was flawless. The
+            artists listened to my requests and made me look and feel beautiful on my big day."</p>
+          <div class="client-info">
+            <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&w=100&q=80"
+              alt="Client Avatar" class="avatar">
+            <div>
+              <h4>Ayesha S.</h4>
+              <div class="stars" style="color:var(--color-accent);font-size:12px;">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. APPOINTMENT SECTION -->
+      <section id="appointment" class="appointment-section container fade-up"
+        style="padding: 6rem 2rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <h2 style="font-size: 3rem; margin-bottom: 1rem; font-family: var(--font-heading); color: var(--color-text);">
+          Book An Appointment</h2>
+        <p style="margin-bottom: 3rem; color: #554C4A;">Schedule your visit and let us take care of your beauty needs.
+        </p>
+        <form id="bookingForm" class="appointment-form"
+          style="width: 100%; max-width: 600px; display: flex; flex-direction: column; gap: 1.5rem; background: #fff; padding: 3rem; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03);">
+          <input type="text" id="name" name="name" placeholder="Your Name" required
+            style="padding: 1rem 1.5rem; border: 1px solid #eee; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; outline: none;">
+          <input type="email" id="email" name="email" placeholder="Your Email" required
+            style="padding: 1rem 1.5rem; border: 1px solid #eee; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; outline: none;">
+          <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required
+            style="padding: 1rem 1.5rem; border: 1px solid #eee; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; outline: none;">
+          <select id="service" name="service" required
+            style="padding: 1rem 1.5rem; border: 1px solid #eee; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; outline: none; background: #fff; color: #554C4A;">
+            <option value="" disabled selected>Select Service</option>
+            <option value="Hair Crafting">Hair Crafting</option>
+            <option value="Facials">Facials</option>
+            <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+            <option value="Bridal Makeup">Bridal Makeup</option>
+          </select>
+          <div style="display: flex; gap: 1.5rem;">
+            <input type="date" id="date" name="date" required
+              style="flex: 1; padding: 1rem 1.5rem; border: 1px solid #eee; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; outline: none; color: #554C4A;">
+            <select id="timeSlot" name="timeSlot" required
+              style="flex: 1; padding: 1rem 1.5rem; border: 1px solid #eee; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; outline: none; background: #fff; color: #554C4A;">
+              <option value="" disabled selected>Time Slot</option>
+              <option value="10:30 AM">10:30 AM</option>
+              <option value="11:30 AM">11:30 AM</option>
+              <option value="12:30 PM">12:30 PM</option>
+              <option value="01:30 PM">01:30 PM</option>
+              <option value="02:30 PM">02:30 PM</option>
+              <option value="03:30 PM">03:30 PM</option>
+              <option value="04:30 PM">04:30 PM</option>
+              <option value="05:30 PM">05:30 PM</option>
+              <option value="06:30 PM">06:30 PM</option>
+              <option value="07:30 PM">07:30 PM</option>
+            </select>
+          </div>
+          <textarea id="message" name="message" placeholder="Your Message (Optional)" rows="4"
+            style="padding: 1rem 1.5rem; border: 1px solid #eee; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; outline: none; width: 100%; resize: vertical;"></textarea>
+          <button type="submit" class="btn-primary"
+            style="margin-top: 1rem; border: none; width: 100%; font-size: 1.1rem; padding: 1.2rem;">Confirm
+            Booking</button>
+        </form>
+      </section>
+
+      <!-- FOOTER / CONTACT -->
+      <footer id="contact" class="footer-section">
+        <div class="container footer-content">
+          <div class="brand">
+            <div class="logo">Depth N Tone</div>
+            <p>Where beauty meets elegance. Serving you with premium care.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Contact Us</h4>
+            <p>Sardari Khera, Alambagh<br>Lucknow, UP 226005</p>
+            <p>Mon - Sun: 10:30 AM - 8:00 PM</p>
+          </div>
+          <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+        <div class="copyright text-center">
+          <p>&copy; 2026 Depth N Tone. All Rights Reserved.</p>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Google Sheets Booking Handler -->
+
+  <script>
+
+    document.getElementById('bookingForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+
+      // const scriptURL = 'https://script.google.com/macros/s/AKfycbyYceaYlcfE93M9ulYfh-vhjF8XccSE9YGfB3tdVtp5UMkz6LpOLPUgruLZAvs-X04J/exec'; //live
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyYceaYlcfE93M9ulYfh-vhjF8XccSE9YGfB3tdVtp5UMkz6LpOLPUgruLZAvs-X04J/exec'; // live shop
+
+      // Combine the date and time into one string for the "Preferred Time" column
+      const selectedDate = document.getElementById('date').value;
+      const selectedTime = document.getElementById('timeSlot').value;
+      const prefTimeStr = selectedDate + " at " + selectedTime;
+
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        service: document.getElementById('service').value,
+        "Preferred Time": prefTimeStr,
+        "preferred time": prefTimeStr,
+        "preferredTime": prefTimeStr,
+        "PreferredTime": prefTimeStr,
+        "Preferred time": prefTimeStr,
+        message: document.getElementById('message').value || "N/A",
+        Message: document.getElementById('message').value || "N/A"
+      };
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          body: JSON.stringify(formData)
+        });
+        const result = await response.json();
+
+        if (result.status === 'success') {
+          btn.textContent = '✅ Booking Confirmed!';
+          btn.style.background = '#4CAF50';
+          btn.disabled = true;
+          document.getElementById('bookingForm').reset();
+
+          let bookAgainBtn = document.getElementById('bookAgainBtn');
+          if (!bookAgainBtn) {
+            bookAgainBtn = document.createElement('button');
+            bookAgainBtn.id = 'bookAgainBtn';
+            bookAgainBtn.type = 'button';
+            bookAgainBtn.className = 'btn-outline';
+            bookAgainBtn.style.marginTop = '1rem';
+            bookAgainBtn.style.width = '100%';
+            bookAgainBtn.style.fontSize = '1.1rem';
+            bookAgainBtn.style.padding = '1.2rem';
+            bookAgainBtn.style.background = '#fff';
+            bookAgainBtn.style.border = '1px solid var(--color-accent)';
+            bookAgainBtn.style.color = 'var(--color-accent)';
+            bookAgainBtn.style.cursor = 'pointer';
+            bookAgainBtn.style.borderRadius = '8px';
+            bookAgainBtn.style.fontWeight = '600';
+            bookAgainBtn.textContent = 'Book Another Appointment';
+            bookAgainBtn.onclick = () => {
+              btn.textContent = 'Confirm Booking';
+              btn.style.background = ''; // reset to CSS default
+              btn.disabled = false;
+              bookAgainBtn.style.display = 'none';
+            };
+            document.getElementById('bookingForm').appendChild(bookAgainBtn);
+          } else {
+            bookAgainBtn.style.display = 'block';
+          }
+        } else {
+          throw new Error('Failed');
+        }
+      } catch (err) {
+        btn.textContent = '❌ Failed. Please call us.';
+        btn.style.background = '#e74c3c';
+        btn.disabled = false;
+      }
+    });
+  </script>
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
